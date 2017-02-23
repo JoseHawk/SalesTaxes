@@ -1,0 +1,35 @@
+About my approach of the project:
+
+With this project I have tried to show different things like my knowledge about different concepts or my code style.
+As the use of frameworks was not permitted, I have tried to create a clear structure of the solution.
+
+The project that you can see is the final version that I have decided to present, but there are certain points that I would like
+to clarify with you, as I believe that coding practices can be seen in different ways depending of the person, and the fact of
+not using "a fix structure" as Spring, it makes more personal the development of the solution.
+
+- For the representation of the different products I have decided to use just a class call "Product.java" instead of using different
+ classes that implement an interface for example, as I consider that there is not enough information to do this.
+- The "Product.java" class does not contain any logic, so I do not consider necessary to create tests for the getters and setters.
+- I consider that the variables that the constructor receives should be controlled outside and not in the constructor itself. So for example,
+ if these are introduce from an console input, it should be there where we control that the price is positive, that the enum value is valid, etc.
+- As there is not information of how the "Product" objects are created (console input, GUI, dependency injection, etc.) and it does not look like the purpose of
+this project, I did not coded that part just to keep the presented code focused on these objectives.
+- In the "PriceCalculationHelper.java" I have included in the methods calculateProductTypeTax and calculateProductOriginTax the thrown of an exception.
+ First of all, I am aware that the enum in any moment should get an invalid value (it should be controlled somewhere else), so it would never happen.
+ I just decided to add two additional values (DEFAULT) to the enums to test this case and have additional tests where I can show the handling of exceptions.
+ As this statement is not going to be reached never, I did not included the "throws" or a try-catch to the method, basically for keep all the other
+ methods clean and not carry on the exception. I wanted to use this project to show different skills, so some things would be changed in a real project.
+- The "printReceipt" method does not have unit test. In the same way that the getters or setters, there is not logic here and the fact that the parameters that it
+receives should not be null and all their properties should be valid, has to be controller somewhere else, in the same way than with the constructor.
+The idea is that we never instantiate/save invalid objects.
+- In the same way, as I am just using "Product", I decided to make use of the var-ags in the method instead of make use of arrays, ArrayList or any other
+collection.
+- I decided to use the BigDecimal class to operate as I believe that this is the best option when accuracy is an important factor.
+- The asked outputs are displayed when running the application. I decided to include a main method for this purpose instead of a test as I did not want to mix things
+and change the format of the tests for displaying information.
+
+Should you need more information or clarify something about my solution, please do not hesitate to contact me.
+
+Thank you for your dedication.
+
+Jose Lara.
